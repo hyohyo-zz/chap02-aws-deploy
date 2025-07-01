@@ -1,8 +1,9 @@
 {
+
   "containerDefinitions": [
     {
       "name": "chap02-container",
-      "image": "851725437767.dkr.ecr.ap-northeast-2.amazonaws.com/chap02-aws-deploy:latest",
+      "image": "694450007382.dkr.ecr.ap-northeast-2.amazonaws.com/chap02-aws-deploy:latest",
       "cpu": 256,
       "memory": 307,
       "memoryReservation": 205,
@@ -26,8 +27,12 @@
           "value": "menudb"
         },
         {
+          "name": "RDS_PASSWORD",
+          "value": "PostgresAdmin123!"
+        },
+        {
           "name": "AWS_S3_BUCKET",
-          "value": "menu-images-2024-ohgi"
+          "value": "menu-images-2024-hyo"
         },
         {
           "name": "SPRING_PROFILES_ACTIVE",
@@ -35,7 +40,7 @@
         },
         {
           "name": "RDS_ENDPOINT",
-          "value": "menu-management-db.cp2s22sumkcx.ap-northeast-2.rds.amazonaws.com"
+          "value": "menu-management-db-hyo.c3u4ka8ckaj9.ap-northeast-2.rds.amazonaws.com"
         },
         {
           "name": "STORAGE_TYPE",
@@ -74,7 +79,7 @@
     }
   ],
   "family": "chap02-task-definition",
-  "executionRoleArn": "arn:aws:iam::851725437767:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::694450007382:role/ecsTaskExecutionRole",
   "networkMode": "bridge",
   "volumes": [],
   "placementConstraints": [],
